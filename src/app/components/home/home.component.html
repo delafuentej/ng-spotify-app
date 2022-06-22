@@ -1,14 +1,2 @@
-<div class="col">
-    <div class="row row-cols-1 row-cols-md-4 g-12">
-
-
-        <div *ngFor="let album of newReleases" class="card m-1">
-            <img [src]=" album.images | noimg" class="card-img-top " alt={{album.name}}>
-            <div class=" card-body ">
-                <h5 class="card-title ">{{album.name}}</h5>
-                <p *ngFor="let artist of album.artists " class="card-text d-inline "><span class="badge rounded-pill bg-primary ">{{artist.name}}</span></p>
-                <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-    </div>
-</div>
+<app-card [items]="newReleases">
+</app-card>
