@@ -20,7 +20,7 @@ export class HomeComponent {
     this.spotifyService.getNewReleases()
     .subscribe((data:any)=>{
       /* console.log(data.albums.items) */
-      this.newReleases= data.albums.items;
+      this.newReleases= data;
       
     })
   }
