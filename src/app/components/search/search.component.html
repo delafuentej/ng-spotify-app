@@ -1,1 +1,20 @@
-<p>search works!</p>
+<div class="row">
+    <div class="col d-flex">
+        <input type="text" class="form-control" placeholder=" Search Artist " aria-label="Search " (keyup.enter)="searchArtist(searchTerm.value)" #searchTerm>
+        <button class="btn btn-outline-success" (click)="searchArtist(searchTerm.value)" type="button ">Search</button>
+    </div>
+</div>
+
+<div class="col ">
+    <div class="row row-cols-4 row-cols-md-4 g-12">
+
+
+        <div *ngFor="let artist of artists" class="card  m-3">
+            <img [src]=" artist.images[0].url " class="card-img-top " alt={{artist.name}}>
+            <div class=" card-body ">
+                <h5 class="card-title ">{{artist.name}}</h5>
+
+            </div>
+        </div>
+    </div>
+</div>
