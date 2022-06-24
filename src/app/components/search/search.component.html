@@ -4,5 +4,6 @@
         <button class="btn btn-outline-success" (click)="searchArtist(searchTerm.value)" type="button ">Search</button>
     </div>
 </div>
-<app-card [items]=" artists ">
+<app-loading *ngIf="loading" class="m-5"></app-loading>
+<app-card *ngIf="!(loading)" [items]=" artists">
 </app-card>
