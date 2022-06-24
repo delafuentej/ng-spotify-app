@@ -5,8 +5,8 @@ import { SearchComponent } from "./components/search/search.component";
 
 export const APP_ROUTES: Routes =[
     {path:'home', component: HomeComponent},
-    {path:'artist',component:ArtistComponent},
     {path:'search/:searchTerm',component:SearchComponent},
+    {path:'artist/:id',component:ArtistComponent},
     {path:'', pathMatch:'full', redirectTo:'home'},
     {path:'**', pathMatch:'full', redirectTo:'home'}
 

@@ -2,7 +2,7 @@
     <div class="row row-cols-1 row-cols-md-4 g-12">
 
 
-        <div *ngFor="let item of items" class="card m-1">
+        <div *ngFor="let item of items" (click)="showArtist(item)" class="card m-1 pointer">
             <img [src]=" item.images | noimg" class="card-img-top " alt={{item.name}}>
             <div class=" card-body ">
                 <h5 class="card-title ">{{item.name}}</h5>
