@@ -1,14 +1,12 @@
-<div class="col animated fadeIn">
-    <div class="row row-cols-1 row-cols-md-4 g-12">
+<div class="row animated fadeIn">
 
 
-        <div *ngFor="let item of items" (click)="showArtist(item)" class="card m-1 pointer">
-            <img [src]=" item.images | noimg" class="card-img-top " alt={{item.name}}>
-            <div class=" card-body ">
-                <h5 class="card-title ">{{item.name}}</h5>
-                <p *ngFor="let artist of item.artists " class="card-text d-inline "><span class="badge rounded-pill bg-primary ">{{artist.name}}</span></p>
-                <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
-            </div>
+    <div *ngFor="let item of items " (click)="showArtist(item) " class=" col-md-3 card pointer ">
+        <img [src]=" item.images | noimg " class="card-img-top " alt={{item.name}}>
+        <div class=" card-body ">
+            <h5 class="card-title ">{{item.name}}</h5>
+            <p *ngFor="let artist of item.artists " class="card-text d-inline "><span class="badge rounded-pill bg-primary ">{{artist.name}}</span></p>
+            <p class="card-text "><small class="text-muted ">Last updated 3 mins ago</small></p>
         </div>
     </div>
 </div>

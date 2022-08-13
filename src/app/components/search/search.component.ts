@@ -19,9 +19,12 @@ export class SearchComponent {
      this.loading=true
     this.spotifyService.getArtists(searchTerm)
     .subscribe((data:any)=>{
+      
       this.artists= data;
       console.log(this.artists)
       this.loading=false;
+     
+      
       
     })
     
